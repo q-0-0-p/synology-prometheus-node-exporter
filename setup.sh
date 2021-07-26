@@ -6,7 +6,7 @@ PROMETHEUS_ROOT="${DOCKER_VOLUME}/prometheus"
 [ ! -d ${PROMETHEUS_ROOT} ] && mkdir -p ${PROMETHEUS_ROOT} \
 && echo "folder created ${PROMETHEUS_ROOT}"
 
-curl -fsS -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/lucasmaurice/synology-prometheus/master/docker-compose.yml > ${PROMETHEUS_ROOT}/docker-compose.yml
+curl -fsS -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/q-0-0-p/synology-prometheus/master/docker-compose.yml > ${PROMETHEUS_ROOT}/docker-compose.yml
 echo "docker-compose file created ${PROMETHEUS_ROOT}/docker-compose.yml"
 
 docker-compose -f ${PROMETHEUS_ROOT}/docker-compose.yml up -d
